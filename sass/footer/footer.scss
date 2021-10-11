@@ -1,0 +1,155 @@
+.footer {
+        width: 100%;
+        height: auto;
+        // background: rgba(255, 0, 255, 0.425);
+        //how do I place this on top?
+        // z-index: 99;
+        margin: 0 40px 26px 40px;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0px;
+        
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        // background: rgba(168, 212, 102, 0.616);
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__copyright {
+        // background: hotpink;
+        width: 266px;
+        height: 100%;
+        float: left;
+        margin-right: 88px;
+
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    //footer nav
+    &__nav {
+        // background: lawngreen;
+        width: 638px;
+        height: 100%;
+        float: left;
+        margin-right: 129px;
+        margin-bottom: 20px;
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            li {
+                display: inline-block;
+
+                a {
+                    color: #000;
+                    text-decoration: none;
+                    transition: all 0.3s ease 0s;
+                    font-weight: 700;
+                    text-decoration: none;
+                    position: relative;
+                }
+                a::before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background: #000;
+                    transform: scaleX(0);
+                    transition: transform 0.3s ease;
+                }
+                a:hover::before {
+                    color: #A7E8BD;
+                    text-decoration: underline 2px solid #000;
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+
+    &__icons {
+        // background: lightskyblue;
+        width: 80px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        float: left;
+        cursor: pointer;
+
+        fa-facebook-square {
+
+        }
+        fa-instagram {
+
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1168px) {
+    .footer {
+        font-family: CaveatReg;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        // background: lightgreen;
+
+        &__content {
+            display: inline-block;
+            justify-content: space-between;
+            align-items: center;
+            // background: lightcoral;
+        }
+        &__copyright {
+            float: left;
+            // background: aqua;
+            width: 100%;
+
+            p {
+                
+            }
+        }
+        &__nav {
+            float: left;
+            max-height: 100px;
+            width: 100%;
+            margin: 10px 0 10px 0;
+
+            ul {
+                display: inline-block;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+
+                li {
+                    a {
+                        padding: 0 20px 0 20px;
+                        float: left;
+                    }
+                }
+            }
+        }
+        &__icons {
+            float: left;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    }
+}
